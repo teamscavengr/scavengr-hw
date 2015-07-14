@@ -1,7 +1,7 @@
 package com.scavengr.scavengrhelloworld;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,13 +10,14 @@ import android.view.View;
 import android.widget.EditText;
 
 
-public class MyActivity extends ActionBarActivity {
+public class MyActivity extends FragmentActivity {
     public final static String EXTRA_MESSAGE = "com.scavengr.scavengrhw.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+        //setContentView(R.layout.fragment_maps);
     }
 
     @Override
