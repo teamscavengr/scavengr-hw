@@ -1,28 +1,25 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:layout_height="match_parent" >
 
-    <fragment
-        android:name="com.scavengr.scavengrhelloworld.MapsFragment"
-        android:id="@+id/maps_fragment"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+    <fragment android:name="com.scavengr.scavengrhelloworld.MapsFragment"
+    android:id="@+id/maps_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 
     <EditText android:id="@+id/edit_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/edit_message" />
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/edit_message"
+    android:layout_below="@id/maps_fragment"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <Button android:layout_width="96dp"
         android:layout_height="wrap_content"
+        android:onClick="sendMessage"
+        android:layout_below="@id/edit_message"
         android:text="@string/button_send"
-        android:onClick="sendMessage"/>
+        android:layout_alignParentRight="true"
+         />
 
-
-
-</LinearLayout>
+</RelativeLayout>
